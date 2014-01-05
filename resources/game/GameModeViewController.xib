@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="4514" systemVersion="13B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GameModeViewController">
+            <connections>
+                <outlet property="gameModeScrollView" destination="149" id="233"/>
+                <outlet property="homeButton" destination="495" id="527"/>
+                <outlet property="pageControl" destination="335" id="462"/>
+                <outlet property="startButton" destination="446" id="458"/>
+                <outlet property="view" destination="1" id="232"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="1">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" image="menu-bg.png" translatesAutoresizingMaskIntoConstraints="NO" id="545">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceHorizontal="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="149">
+                    <rect key="frame" x="0.0" y="100" width="320" height="355"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </scrollView>
+                <imageView userInteractionEnabled="NO" contentMode="center" image="game-mode.png" translatesAutoresizingMaskIntoConstraints="NO" id="177">
+                    <rect key="frame" x="33" y="36" width="254" height="40"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="254" id="195"/>
+                        <constraint firstAttribute="height" constant="40" id="202"/>
+                    </constraints>
+                </imageView>
+                <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="335">
+                    <rect key="frame" x="141" y="442" width="39" height="37"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <connections>
+                        <action selector="changePageRequested:" destination="-1" eventType="valueChanged" id="544"/>
+                    </connections>
+                </pageControl>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="446">
+                    <rect key="frame" x="164" y="485" width="63" height="63"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                    <state key="normal" image="confirm.png">
+                        <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="highlighted" image="confirm-selected.png">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="startRequested:" destination="-1" eventType="touchUpInside" id="461"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="495">
+                    <rect key="frame" x="93" y="485" width="63" height="63"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                    <state key="normal" image="home.png">
+                        <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="highlighted" image="home-selected.png">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="homeRequested:" destination="-1" eventType="touchUpInside" id="528"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="177" firstAttribute="top" secondItem="1" secondAttribute="top" constant="36" id="451"/>
+                <constraint firstItem="149" firstAttribute="top" secondItem="1" secondAttribute="top" constant="100" id="453"/>
+                <constraint firstItem="446" firstAttribute="leading" secondItem="495" secondAttribute="trailing" constant="8" symbolic="YES" id="534"/>
+                <constraint firstItem="495" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="93" id="536"/>
+                <constraint firstAttribute="bottom" secondItem="149" secondAttribute="bottom" constant="113" id="537"/>
+                <constraint firstAttribute="bottom" secondItem="495" secondAttribute="bottom" constant="20" symbolic="YES" id="539"/>
+                <constraint firstAttribute="bottom" secondItem="446" secondAttribute="bottom" constant="20" symbolic="YES" id="540"/>
+                <constraint firstAttribute="bottom" secondItem="335" secondAttribute="bottom" constant="89" id="542"/>
+                <constraint firstItem="545" firstAttribute="top" secondItem="1" secondAttribute="top" id="546"/>
+                <constraint firstItem="545" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="547"/>
+                <constraint firstItem="149" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="555"/>
+                <constraint firstItem="149" firstAttribute="centerX" secondItem="335" secondAttribute="centerX" id="556"/>
+                <constraint firstItem="149" firstAttribute="centerX" secondItem="177" secondAttribute="centerX" id="557"/>
+                <constraint firstItem="149" firstAttribute="trailing" secondItem="1" secondAttribute="trailing" id="558"/>
+                <constraint firstItem="545" firstAttribute="bottom" secondItem="1" secondAttribute="bottom" id="615"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="confirm-selected.png" width="63" height="63"/>
+        <image name="confirm.png" width="63" height="63"/>
+        <image name="game-mode.png" width="182" height="47"/>
+        <image name="home-selected.png" width="63" height="63"/>
+        <image name="home.png" width="63" height="63"/>
+        <image name="menu-bg.png" width="320" height="480"/>
+    </resources>
+</document>
